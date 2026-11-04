@@ -25,3 +25,5 @@ jobs:
 
     - name: 5. Testes Automatizados (Quality Gate de Comportamento)
       run: php vendor/bin/phpunit tests/CalculadoraTest.php
+      
+      
