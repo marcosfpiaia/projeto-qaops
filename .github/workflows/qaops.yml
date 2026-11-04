@@ -24,4 +24,4 @@ jobs:
       run: php -l Calculadora.php
 
     - name: 5. Testes Automatizados (Quality Gate de Comportamento)
-      run: vendor/bin/phpunit tests/CalculadoraTest.php
+      run: php vendor/bin/phpunit tests/CalculadoraTest.php
