@@ -1,0 +1,48 @@
+name: Pipeline QAOps Unificada
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  # FASE 1: O Motor (Backend)
+  backend-php:
+    name: 1. Testes de Backend (PHP)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Configurar PHP 8.2
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Análise Estática
+        run: php -l src/*.php
+
+      - name: Testes Unitários (PHPUnit)
+        run: vendor/bin/phpunit tests/
+
+  # FASE 2: A Carroçaria (Frontend)
+  frontend-playwright:
+    name: 2. Testes de Interface (Playwright)
+    needs: backend-php # <--- A MÁGICA ESTÁ AQUI! Só começa se a fase 1 passar.
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Instalar pacotes NPM
+        run: npm install
+
+      - name: Instalar navegadores do Playwright
+        run: npx playwright install --with-deps
+
+      - name: Testes E2E (Playwright)
+        run: npx playwright test
