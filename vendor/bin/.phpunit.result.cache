@@ -1,1 +1,1 @@
-{"version":2,"defects":[],"times":{"CalculadoraTest::testSomar":0.536}}
+{"version":2,"defects":[],"times":{"CalculadoraTest::testSomar":0.536,"AuthTest::testLoginComCredenciaisCorretasDeveRetornarTrue":0.19,"AuthTest::testLoginComSenhaIncorretaDeveRetornarFalse":0.019}}
