@@ -21,7 +21,7 @@ jobs:
       run: composer install --prefer-dist --no-progress
 
     - name: 4. Análise Estática (Quality Gate de Código)
-      run: php -l Calculadora.php
+      run: php -l src/Calculadora.php
 
     - name: 5. Testes Automatizados (Quality Gate de Comportamento)
       run: php vendor/bin/phpunit tests/CalculadoraTest.php
