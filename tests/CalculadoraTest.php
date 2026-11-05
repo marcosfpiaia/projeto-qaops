@@ -9,3 +9,5 @@ class CalculadoraTest extends TestCase {
         $this->assertEquals(5, $resultado, "O resultado da soma de 2 e 3 deve ser 5.");
     }
 }
+
+// Teste finalizado via Kanban numa linha em branco
