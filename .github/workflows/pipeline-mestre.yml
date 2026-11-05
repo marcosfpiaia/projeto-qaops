@@ -22,7 +22,9 @@ jobs:
         run: php -l src/*.php
 
       - name: Testes Unitários (PHPUnit)
-        run: vendor/bin/phpunit tests/
+        run: |
+          chmod +x vendor/bin/phpunit
+          vendor/bin/phpunit tests/
 
   # FASE 2: A Carroçaria (Frontend)
   frontend-playwright:
