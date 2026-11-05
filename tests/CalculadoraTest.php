@@ -10,4 +10,4 @@ class CalculadoraTest extends TestCase {
     }
 }
 
-// Teste finalizado via Kanban numa linha em branco 3
+// Teste finalizado via Kanban numa linha em branco 4
