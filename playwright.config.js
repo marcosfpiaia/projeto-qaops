@@ -72,10 +72,11 @@ export default defineConfig({
   ],
 
   /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://localhost:3000',
-  //   reuseExistingServer: !process.env.CI,
-  // },
+  /* Inicia o mini-servidor PHP automaticamente antes dos testes */
+  webServer: {
+    command: 'php -S localhost:8082',
+    url: 'http://localhost:8082',
+    reuseExistingServer: !process.env.CI,
+  },
 });
 
