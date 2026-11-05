@@ -1,0 +1,26 @@
+{
+  "name": "projeto-qaopscd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcosfpiaia/projeto-qaops.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/marcosfpiaia/projeto-qaops/issues"
+  },
+  "homepage": "https://github.com/marcosfpiaia/projeto-qaops#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^26.6.6"
+  }
+}
