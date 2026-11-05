@@ -21,7 +21,7 @@ jobs:
       - name: Análise Estática
         run: php -l src/*.php
 
-      - name: Testes Unitários (PHPUnit)
+      - name: Testes Unitários (PHPUnit) 
         run: |
           chmod +x vendor/bin/phpunit
           vendor/bin/phpunit tests/
