@@ -5,5 +5,5 @@ test('Deve fazer login com sucesso na cobaia', async ({ page }) => {
   await page.fill('#usuario', 'admin');
   await page.fill('#senha', '1234');
   await page.click('#btn-entrar');
-  await expect(page.locator('#mensagem')).toHaveText('Login SEM sucesso!');
+  await expect(page.locator('#mensagem')).toHaveText('Login com sucesso!');
 });
