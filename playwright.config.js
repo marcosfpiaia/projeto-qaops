@@ -74,9 +74,10 @@ export default defineConfig({
   /* Run your local dev server before starting the tests */
   /* Inicia o mini-servidor PHP automaticamente antes dos testes */
   webServer: {
-    command: 'php -S localhost:8082',
-    url: 'http://localhost:8082/login.php',
+    command: 'php -S 127.0.0.1:8082 -t .',
+    url: 'http://127.0.0.1:8082/index.html',
     reuseExistingServer: !process.env.CI,
+    timeout: 15000,
   },
 });
 
